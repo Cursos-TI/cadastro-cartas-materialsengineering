@@ -79,6 +79,51 @@ int main() {
   printf("1ª Carta vence a 2ª Carta : %d\n",resultado_A01>resultado_B01);
   printf("2ª Carta vence a 1ª Carta : %d\n",resultado_B01>resultado_A01);
 
+// Bloco decisãoo if-else
+printf("\n");
+  printf("**********************************\n");
+  printf("\n");
+if (populacao_A01>populacao_B01){
+  printf("A 1 Carta em população venceu\n");
+}
+else {
+  printf("A 2ª Carta em população venceu\n");
+}
+printf("\n");
+if (area_A01>area_B01){
+  printf("A 1 Carta em área venceu\n");
+}
+else {
+  printf("A 2ª Carta em área venceu\n");
+}
+printf("\n");
+if (pib_A01>pib_B01){
+  printf("A 1 Carta em PIB venceu\n");
+}
+else {
+  printf("A 2ª Carta em PIB venceu\n");
+}
+printf("\n");
+if (pturismo_01A>pturismo_01B){
+  printf("A 1 Carta em turismo venceu\n");
+}
+else {
+  printf("A 2ª Carta em turismo venceu\n");
+}
+printf("\n");
+if (PIBperC_A01>PIBperC_B01){
+  printf("A 1 Carta em PIB per capita venceu\n");
+}
+else {
+  printf("A 2ª Carta em PIB per capita venceu\n");
+}
+printf("\n");
+if (densidade_A01<densidade_B01){
+  printf("A 1 Carta em densidade demográfica venceu\n");
+}
+else {
+  printf("A 2ª Carta em densidade demográfica venceu\n");
+}
 
 return 0;
 } 
