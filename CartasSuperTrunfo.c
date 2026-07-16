@@ -15,10 +15,10 @@ int main() {
   char codcidade_2B[5] = "B02";
   
   // Área para entrada de dados
-  int populacao_A01 = 200;
-  int populacao_A02 = 500;
-  int populacao_B01 = 150;
-  int populacao_B02 = 750;
+  unsigned long int populacao_A01 = 200;
+  unsigned long int populacao_A02 = 500;
+  unsigned long int populacao_B01 = 150;
+  unsigned long int populacao_B02 = 750;
   float area_A01 = 353.90;
   float area_A02 = 134.87;
   float area_B01 = 122.35;
@@ -41,6 +41,9 @@ int main() {
   float densidade_B01 = populacao_B01/area_B02;
   float PIBperC_A01 = pib_A01/populacao_A01;
   float PIBperC_B01 = pib_B01/populacao_B01;
+  float resultado_A01 = populacao_A01 + area_A01 + pib_A01 + (1/densidade_A01) + pturismo_01A + PIBperC_A01;
+  float resultado_B01 = populacao_B01 + area_B01 + pib_B01 + (1/densidade_B01) + pturismo_01B + PIBperC_B01;
+
 
 
   // Área para exibição dos dados da cidade
@@ -49,7 +52,7 @@ int main() {
   printf("código Estado - %s, codigo cidade - %s\n",codEstado_A, codcidade_1A);
   printf("Estado: %s\n",estado_A);
   printf("cidade: %s\n",codcidade_1A);
-  printf("População: %d milhões\n",populacao_A01);
+  printf("População: %lu milhões\n",populacao_A01);
   printf("Àrea: %.2f Km²\n", area_A01);
   printf("PIB: %.2f bilhôes\n",pib_A01);
   printf("Ponto turístico: %d\n",pturismo_01A);
@@ -63,11 +66,19 @@ int main() {
   printf("código Estado - %s, codigo cidade - %s\n",codEstado_B, codcidade_1B);
   printf("Estado: %s\n",estado_B);
   printf("cidade: %s\n",codcidade_1B);
-  printf("População: %d miljhões\n",populacao_B01);
+  printf("População: %lu miljhões\n",populacao_B01);
   printf("Àrea: %.2f Km²\n", area_B01);
   printf("PIB: %.2f bilhões\n",pib_B01);
   printf("Ponto turístico: %d\n",pturismo_01B);
    printf("Densidade demogáfica: %.2f milhôes hab/Km²\n",densidade_B01);
   printf("PIB per capita: $ %.2f/hab bilhões de reais\n",PIBperC_B01);
+  printf("\n");
+  printf("#####################################\n");
+  printf("\n");
+  printf("Super Triunfo 1ª Carta %.2f e 2ª Carta %.2f\n",resultado_A01,resultado_B01);
+  printf("1ª Carta vence a 2ª Carta : %d\n",resultado_A01>resultado_B01);
+  printf("2ª Carta vence a 1ª Carta : %d\n",resultado_B01>resultado_A01);
+
+
 return 0;
 } 
