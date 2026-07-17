@@ -79,7 +79,7 @@ int main() {
   printf("1ª Carta vence a 2ª Carta : %d\n",resultado_A01>resultado_B01);
   printf("2ª Carta vence a 1ª Carta : %d\n",resultado_B01>resultado_A01);
 
-// Bloco decisãoo if-else
+// Bloco decisãoo if-else com switch
 printf("\n");
   printf("**********************************\n");
   printf("\n");
