@@ -41,6 +41,7 @@ int main() {
   float densidade_B01 = populacao_B01/area_B02;
   float PIBperC_A01 = pib_A01/populacao_A01;
   float PIBperC_B01 = pib_B01/populacao_B01;
+  char* result;
   float resultado_A01 = populacao_A01 + area_A01 + pib_A01 + (1/densidade_A01) + pturismo_01A + PIBperC_A01;
   float resultado_B01 = populacao_B01 + area_B01 + pib_B01 + (1/densidade_B01) + pturismo_01B + PIBperC_B01;
 
@@ -86,7 +87,7 @@ printf("\n");
 // Escolha de opção: 0-população e área; 1- PIB e PIB_percapita
 //2 pturismo e Densidade
 int escolha;
-printf("Escolha a opção de 0 a 2\n");
+printf("Escolha a opção de 0 a 3\n");
 scanf("%d",&escolha);
 switch (escolha)
 {
@@ -112,6 +113,12 @@ if (pturismo_01A>pturismo_01B){if (densidade_A01<densidade_B01)
      else if (densidade_A01>densidade_B01){printf("2ª Carta ganhou em Turismo e densidade\n");} 
      else {printf("2ª Carta ganhou em Turismo e perdeu em densidade\n");}
      break;
+case 3:
+result = (resultado_A01>resultado_B01)?
+"A 1ª Carta ganhou\n": "A 2ª Carta ganhou\n";
+printf("Resultado do Status %s\n",result);
+printf("Resultado 1ª Carta %.2f e reultado 2ª Carta %.2f\n",resultado_A01,resultado_B01);
+break;
 
 default:
 printf("Escolha outra opção\n");
